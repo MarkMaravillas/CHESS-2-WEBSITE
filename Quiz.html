@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid rgb(90, 65, 65);
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .question {
+            background-color: #48e3e9;
+            font-weight: bold;
+            color: black;  /* Set font color to black */
+        }
+        
+        body {
+            background-color: #152c35;
+            color: white;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        p {
+            color: white;
+        }
+
+        .choices {
+            background-color: #4166df;
+        }
+
+        .result {
+            background-color: #000000;
+            font-style: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chess Quiz!!!</h1>
+    <p>This is a Chess Quiz to test how much you know about chess, whether it's pre-existing knowledge or knowledge that you gained after going through our website.</p>
+
+    <table class="banana">
+        <tr class="question">
+            <td>1. How many squares does a chessboard have?</td>
+        </tr>
+        <tr class="choices">
+            <td>
+                <button onclick="Answer1(true)">64</button>
+                <button onclick="Answer1(false)">21</button>
+                <button onclick="Answer1(false)">8</button>
+                <button onclick="Answer1(false)">69</button>
+            </td>
+        </tr>
+        <tr class="result">
+            <td id="1"></td>
+        </tr>
+
+        <tr class="question">
+            <td>2. What is it called when a player can't defend an attack against their king?</td>
+        </tr>
+        <tr class="choices">
+            <td>
+                <button onclick="Answer2(false)">Stalemate</button>
+                <button onclick="Answer2(false)">Guirillamate</button>
+                <button onclick="Answer2(true)">Checkmate</button>
+                <button onclick="Answer2(false)">Check</button>
+            </td>
+        </tr>
+        <tr class="result">
+            <td id="2"></td>
+        </tr>
+
+        <tr class="question">
+            <td>3. The quickest possible checkmate is in?</td>
+        </tr>
+        <tr class="choices">
+            <td>
+                <button onclick="Answer3(false)">1 moves</button>
+                <button onclick="Answer3(false)">6 moves</button>
+                <button onclick="Answer3(true)">2 moves</button>
+                <button onclick="Answer3(false)">4 moves</button>
+            </td>
+        </tr>
+        <tr class="result">
+            <td id="3"></td>
+        </tr>
+
+        <tr class="question">
+            <td>4. What is the Quickest possible checkmate name?</td>
+        </tr>
+        <tr class="choices">
+            <td>
+                <button onclick="Answer4(true)">Fool's Mate</button>
+                <button onclick="Answer4(false)">Scholars Mate</button>
+                <button onclick="Answer4(false)">Bong Cloud</button>
+                <button onclick="Answer4(false)">Bird trap Mate</button>
+            </td>
+        </tr>
+        <tr class="result">
+            <td id="4"></td>
+        </tr>
+
+        <tr class="question">
+            <td>5. Where did chess originate?</td>
+        </tr>
+        <tr class="choices">
+            <td>
+                <button onclick="Answer5(false)">Germany</button>
+                <button onclick="Answer5(false)">Poland</button>
+                <button onclick="Answer5(true)">India</button>
+                <button onclick="Answer5(false)">Philippines</button>
+            </td>
+        </tr>
+        <tr class="result">
+            <td id="5"></td>
+        </tr>
+
+        <tr class="question">
+            <td>6. Which piece moves the farthest in one move?</td>
+        </tr>
+        <tr class="choices">
+            <td>
+                <button onclick="Answer6(false)">King</button>
+                <button onclick="Answer6(false)">Knight</button>
+                <button onclick="Answer6(false)">Bishop</button>
+                <button onclick="Answer6(true)">Queen</button>
+            </td>
+        </tr>
+        <tr class="result">
+            <td id="6"></td>
+        </tr>
+
+        <tr class="question">
+            <td>7. What is a 'castling' move?</td>
+        </tr>
+        <tr class="choices">
+            <td>
+                <button onclick="Answer7(true)">A move involving the king and rook</button>
+                <button onclick="Answer7(false)">A move involving two pawns</button>
+                <button onclick="Answer7(false)">A move to promote a pawn</button>
+                <button onclick="Answer7(false)">A move involving the queen and knight</button>
+            </td>
+        </tr>
+        <tr class="result">
+            <td id="7"></td>
+        </tr>
+
+        <tr class="question">
+            <td>8. What does it mean to 'check' the opponent's king?</td>
+        </tr>
+        <tr class="choices">
+            <td>
+                <button onclick="Answer8(false)">The opponent is forced to move</button>
+                <button onclick="Answer8(true)">The king is under direct threat</button>
+                <button onclick="Answer8(false)">The game ends in a draw</button>
+                <button onclick="Answer8(false)">The opponent's king is captured</button>
+            </td>
+        </tr>
+        <tr class="result">
+            <td id="8"></td>
+        </tr>
+
+        <tr class="question">
+            <td>9. What is the name of the famous chess-playing computer developed by IBM?</td>
+        </tr>
+        <tr class="choices">
+            <td>
+                <button onclick="Answer9(false)">AlphaZero</button>
+                <button onclick="Answer9(false)">Stockfish</button>
+                <button onclick="Answer9(false)">Kasparov 2000</button>
+                <button onclick="Answer9(true)">Deep Blue</button>
+            </td>
+        </tr>
+        <tr class="result">
+            <td id="9"></td>
+        </tr>
+
+        <tr class="question">
+            <td>10. How many pawns does each player start with in a chess game?</td>
+        </tr>
+        <tr class="choices">
+            <td>
+                <button onclick="Answer10(false)">10</button>
+                <button onclick="Answer10(true)">8</button>
+                <button onclick="Answer10(false)">6</button>
+                <button onclick="Answer10(false)">12</button>
+            </td>
+        </tr>
+        <tr class="result">
+            <td id="10"></td>
+        </tr>
+
+    </table>
+
+    <script>
+        function Answer1(isCorrect) {
+            document.getElementById('1').innerHTML = isCorrect ? "You are Correct!" : "You are Incorrect.";        
+        }
+
+        function Answer2(isCorrect) {
+            document.getElementById('2').innerHTML = isCorrect ? "You are Correct!" : "You are Incorrect.";        
+        }
+
+        function Answer3(isCorrect) {
+            document.getElementById('3').innerHTML = isCorrect ? "You are Correct!" : "You are Incorrect.";        
+        }
+
+        function Answer4(isCorrect) {
+            document.getElementById('4').innerHTML = isCorrect ? "You are Correct!" : "You are Incorrect.";        
+        }
+
+        function Answer5(isCorrect) {
+            document.getElementById('5').innerHTML = isCorrect ? "You are Correct!" : "You are Incorrect.";        
+        }
+
+        function Answer6(isCorrect) {
+            document.getElementById('6').innerHTML = isCorrect ? "You are Correct!" : "You are Incorrect.";        
+        }
+
+        function Answer7(isCorrect) {
+            document.getElementById('7').innerHTML = isCorrect ? "You are Correct!" : "You are Incorrect.";        
+        }
+
+        function Answer8(isCorrect) {
+            document.getElementById('8').innerHTML = isCorrect ? "You are Correct!" : "You are Incorrect.";        
+        }
+
+        function Answer9(isCorrect) {
+            document.getElementById('9').innerHTML = isCorrect ? "You are Correct!" : "You are Incorrect.";        
+        }
+
+        function Answer10(isCorrect) {
+            document.getElementById('10').innerHTML = isCorrect ? "You are Correct!" : "You are Incorrect.";        
+        }
+    </script>
+</body>
+</html>
